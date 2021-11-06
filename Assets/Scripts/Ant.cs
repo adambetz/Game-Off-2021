@@ -15,6 +15,8 @@ public class Ant : MonoBehaviour
 
     private GameObject currentTarget;
 
+    public Animator anim;
+
     private void Awake()
     {
         home = FindObjectOfType<Home>();
@@ -44,6 +46,7 @@ public class Ant : MonoBehaviour
     {
         if (GetDistanceToTarget() <= accuracy)
         {
+            anim.SetBool("Walk", true);
             SetNextTarget();
             Seek(currentTarget.transform.position);
         }
