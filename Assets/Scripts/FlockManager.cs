@@ -9,7 +9,7 @@ public class FlockManager : MonoBehaviour
     public GameObject[] antsArray;
     public Vector3 swimLimits = new Vector3(5,5,5);
 
-    private void Start()
+    protected virtual void Start()
     {
         antsArray = new GameObject[numerOfAnts];
         for(int i=0; i<numerOfAnts; i++)
