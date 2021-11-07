@@ -227,6 +227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9824813}
+  - component: {fileID: 9824814}
   m_Layer: 7
   m_Name: GroundClump (14)
   m_TagString: Clump
@@ -256,6 +257,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9824814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9824812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &11568451
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 11568452}
+  - component: {fileID: 11568453}
   m_Layer: 7
   m_Name: GroundClump (7)
   m_TagString: Clump
@@ -294,6 +308,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11568453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11568451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &15222547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 127481055}
+  - component: {fileID: 127481056}
   m_Layer: 7
   m_Name: GroundClump (17)
   m_TagString: Clump
@@ -2042,6 +2069,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &127481056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127481054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &138447691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3001,6 +3040,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 214853549}
+  - component: {fileID: 214853550}
   m_Layer: 7
   m_Name: GroundClump (36)
   m_TagString: Clump
@@ -3030,6 +3070,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214853550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214853548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &215865478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4654,6 +4706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 301049659}
+  - component: {fileID: 301049660}
   m_Layer: 7
   m_Name: GroundClump (9)
   m_TagString: Clump
@@ -4683,6 +4736,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301049660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301049658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &302381842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,6 +4757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302381843}
+  - component: {fileID: 302381844}
   m_Layer: 7
   m_Name: GroundClump (38)
   m_TagString: Clump
@@ -4721,6 +4787,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &302381844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302381842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &303105319
 GameObject:
   m_ObjectHideFlags: 0
@@ -6345,6 +6423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 420173318}
+  - component: {fileID: 420173319}
   m_Layer: 7
   m_Name: GroundClump (27)
   m_TagString: Clump
@@ -6374,6 +6453,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &420173319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420173317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &422320422
 GameObject:
   m_ObjectHideFlags: 0
@@ -6668,6 +6759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 433806858}
+  - component: {fileID: 433806859}
   m_Layer: 7
   m_Name: GroundClump (35)
   m_TagString: Clump
@@ -6697,6 +6789,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433806859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433806857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &434511166
 GameObject:
   m_ObjectHideFlags: 0
@@ -6896,6 +7000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 438189350}
+  - component: {fileID: 438189351}
   m_Layer: 7
   m_Name: GroundClump (22)
   m_TagString: Clump
@@ -6925,6 +7030,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &438189351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438189349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &453743788
 GameObject:
   m_ObjectHideFlags: 0
@@ -7124,6 +7241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 472520222}
+  - component: {fileID: 472520223}
   m_Layer: 7
   m_Name: GroundClump (19)
   m_TagString: Clump
@@ -7153,6 +7271,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472520223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472520221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &483687460
 GameObject:
   m_ObjectHideFlags: 0
@@ -9537,6 +9667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 638100811}
+  - component: {fileID: 638100812}
   m_Layer: 7
   m_Name: GroundClump (18)
   m_TagString: Clump
@@ -9566,6 +9697,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &638100812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638100810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643797236
 GameObject:
   m_ObjectHideFlags: 0
@@ -10537,6 +10680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 709730256}
+  - component: {fileID: 709730257}
   m_Layer: 7
   m_Name: GroundClump (6)
   m_TagString: Clump
@@ -10566,6 +10710,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &709730257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709730255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &726807399
 GameObject:
   m_ObjectHideFlags: 0
@@ -10575,6 +10731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726807400}
+  - component: {fileID: 726807401}
   m_Layer: 7
   m_Name: GroundClump (3)
   m_TagString: Clump
@@ -10604,6 +10761,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726807401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726807399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &748093829
 GameObject:
   m_ObjectHideFlags: 0
@@ -11183,6 +11352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 765617581}
+  - component: {fileID: 765617582}
   m_Layer: 7
   m_Name: GroundClump (21)
   m_TagString: Clump
@@ -11212,6 +11382,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765617582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765617580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &774879143
 GameObject:
   m_ObjectHideFlags: 0
@@ -12456,6 +12638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 832099874}
+  - component: {fileID: 832099875}
   m_Layer: 7
   m_Name: GroundClump (28)
   m_TagString: Clump
@@ -12485,6 +12668,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832099875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832099873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832259184
 GameObject:
   m_ObjectHideFlags: 0
@@ -13159,6 +13354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 889549859}
+  - component: {fileID: 889549860}
   m_Layer: 7
   m_Name: GroundClump (29)
   m_TagString: Clump
@@ -13188,6 +13384,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889549860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889549858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &890379829
 GameObject:
   m_ObjectHideFlags: 0
@@ -13197,6 +13405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 890379830}
+  - component: {fileID: 890379831}
   m_Layer: 7
   m_Name: GroundClump (11)
   m_TagString: Clump
@@ -13226,6 +13435,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890379831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890379829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &892450304
 GameObject:
   m_ObjectHideFlags: 0
@@ -13900,6 +14121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 926257043}
+  - component: {fileID: 926257044}
   m_Layer: 7
   m_Name: GroundClump (20)
   m_TagString: Clump
@@ -13929,6 +14151,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &926257044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926257042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &926988573
 GameObject:
   m_ObjectHideFlags: 0
@@ -14033,6 +14267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939538851}
+  - component: {fileID: 939538852}
   m_Layer: 7
   m_Name: GroundClump
   m_TagString: Clump
@@ -14062,6 +14297,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &939538852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939538850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &948054327
 GameObject:
   m_ObjectHideFlags: 0
@@ -14451,6 +14698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961365128}
+  - component: {fileID: 961365129}
   m_Layer: 7
   m_Name: GroundClump (32)
   m_TagString: Clump
@@ -14480,6 +14728,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961365129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961365127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &962289096
 GameObject:
   m_ObjectHideFlags: 0
@@ -14857,6 +15117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 990408487}
+  - component: {fileID: 990408488}
   m_Layer: 7
   m_Name: GroundClump (4)
   m_TagString: Clump
@@ -14886,6 +15147,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &990408488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990408486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1004393808
 GameObject:
   m_ObjectHideFlags: 0
@@ -14990,6 +15263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1013191521}
+  - component: {fileID: 1013191522}
   m_Layer: 7
   m_Name: GroundClump (25)
   m_TagString: Clump
@@ -15019,6 +15293,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1013191522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013191520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1016217208
 GameObject:
   m_ObjectHideFlags: 0
@@ -17499,6 +17785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203527599}
+  - component: {fileID: 1203527600}
   m_Layer: 7
   m_Name: GroundClump (12)
   m_TagString: Clump
@@ -17528,6 +17815,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203527600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203527598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1208056281
 GameObject:
   m_ObjectHideFlags: 0
@@ -18962,6 +19261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305240391}
+  - component: {fileID: 1305240392}
   m_Layer: 7
   m_Name: GroundClump (33)
   m_TagString: Clump
@@ -18991,6 +19291,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305240392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305240390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1305516683
 GameObject:
   m_ObjectHideFlags: 0
@@ -19095,6 +19407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306216277}
+  - component: {fileID: 1306216278}
   m_Layer: 7
   m_Name: GroundClump (15)
   m_TagString: Clump
@@ -19124,6 +19437,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1306216278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306216276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1321885287
 GameObject:
   m_ObjectHideFlags: 0
@@ -20248,6 +20573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1411451071}
+  - component: {fileID: 1411451072}
   m_Layer: 7
   m_Name: GroundClump (30)
   m_TagString: Clump
@@ -20277,6 +20603,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1411451072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411451070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1413138429
 GameObject:
   m_ObjectHideFlags: 0
@@ -20476,6 +20814,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421640252}
+  - component: {fileID: 1421640253}
   m_Layer: 7
   m_Name: GroundClump (16)
   m_TagString: Clump
@@ -20505,6 +20844,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421640253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421640251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1425810614
 GameObject:
   m_ObjectHideFlags: 0
@@ -21654,6 +22005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1512853880}
+  - component: {fileID: 1512853881}
   m_Layer: 7
   m_Name: GroundClump (39)
   m_TagString: Clump
@@ -21683,6 +22035,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1512853881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512853879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1523075363
 GameObject:
   m_ObjectHideFlags: 0
@@ -23307,6 +23671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1600798913}
+  - component: {fileID: 1600798914}
   m_Layer: 7
   m_Name: GroundClump (5)
   m_TagString: Clump
@@ -23336,6 +23701,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600798914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600798912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1606529560
 GameObject:
   m_ObjectHideFlags: 0
@@ -24675,6 +25052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711238135}
+  - component: {fileID: 1711238136}
   m_Layer: 7
   m_Name: GroundClump (23)
   m_TagString: Clump
@@ -24704,6 +25082,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1711238136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711238134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1715677320
 GameObject:
   m_ObjectHideFlags: 0
@@ -25663,6 +26053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1759710414}
+  - component: {fileID: 1759710415}
   m_Layer: 7
   m_Name: GroundClump (31)
   m_TagString: Clump
@@ -25692,6 +26083,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1759710415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759710413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1762160724
 GameObject:
   m_ObjectHideFlags: 0
@@ -25891,6 +26294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773884057}
+  - component: {fileID: 1773884058}
   m_Layer: 7
   m_Name: GroundClump (24)
   m_TagString: Clump
@@ -25920,6 +26324,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1773884058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773884056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1779311806
 GameObject:
   m_ObjectHideFlags: 0
@@ -26256,6 +26672,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   goal: {fileID: 652650022}
+  currentGroundClump: {fileID: 0}
   home: {fileID: 1993817404}
 --- !u!1 &1794398501
 GameObject:
@@ -28166,6 +28583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1894807181}
+  - component: {fileID: 1894807182}
   m_Layer: 7
   m_Name: GroundClump (10)
   m_TagString: Clump
@@ -28195,6 +28613,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894807182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894807180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1897435869
 GameObject:
   m_ObjectHideFlags: 0
@@ -29724,6 +30154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1949130253}
+  - component: {fileID: 1949130254}
   m_Layer: 7
   m_Name: GroundClump (26)
   m_TagString: Clump
@@ -29753,6 +30184,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949130254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949130252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1949663971
 GameObject:
   m_ObjectHideFlags: 0
@@ -29952,6 +30395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1950679132}
+  - component: {fileID: 1950679133}
   m_Layer: 7
   m_Name: GroundClump (37)
   m_TagString: Clump
@@ -29981,6 +30425,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1950679133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950679131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1965358023
 GameObject:
   m_ObjectHideFlags: 0
@@ -30465,6 +30921,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1993070042}
+  - component: {fileID: 1993070043}
   m_Layer: 7
   m_Name: GroundClump (2)
   m_TagString: Clump
@@ -30494,6 +30951,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993070043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993070041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1993817403
 GameObject:
   m_ObjectHideFlags: 0
@@ -30611,6 +31080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2000525405}
+  - component: {fileID: 2000525406}
   m_Layer: 7
   m_Name: GroundClump (8)
   m_TagString: Clump
@@ -30640,6 +31110,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2000525406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000525404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2002279042
 GameObject:
   m_ObjectHideFlags: 0
@@ -31124,6 +31606,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2023778292}
+  - component: {fileID: 2023778293}
   m_Layer: 7
   m_Name: GroundClump (1)
   m_TagString: Clump
@@ -31153,6 +31636,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023778293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023778291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2032057250
 GameObject:
   m_ObjectHideFlags: 0
@@ -31542,6 +32037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2043798058}
+  - component: {fileID: 2043798059}
   m_Layer: 7
   m_Name: GroundClump (13)
   m_TagString: Clump
@@ -31571,6 +32067,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043798059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043798057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2050905082
 GameObject:
   m_ObjectHideFlags: 0
@@ -31675,6 +32183,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2053127976}
+  - component: {fileID: 2053127977}
   m_Layer: 7
   m_Name: GroundClump (34)
   m_TagString: Clump
@@ -31704,6 +32213,18 @@ Transform:
   m_Father: {fileID: 1371906009}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2053127977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053127975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2063132253
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,35 +5,69 @@ using UnityEngine.AI;
 
 public class Ant : MonoBehaviour
 {
+    private AntFlockManager flockManager = null;
     public float accuracy = 5.0f;
 
     [SerializeField] private NavMeshAgent agent;
     private Home home;
 
-    private Goal[] goals;
-    private GameObject targetGoal;
+    //private Clump goal;
+    private Clump targetGoal;
 
-    private GameObject currentTarget;
+    public GameObject currentTarget;
 
     public Animator anim;
+
+    private bool gathering = false;
 
     private void Awake()
     {
         home = FindObjectOfType<Home>();
-        goals = FindObjectsOfType<Goal>();
     }
 
     private void Start()
     {
-        targetGoal = goals[Random.Range(0, goals.Length)].gameObject;
-        currentTarget = targetGoal;
+        //targetGoal = goals[Random.Range(0, goals.Length)].gameObject;
+        //currentTarget = targetGoal;
 
-        Seek(currentTarget.transform.position);
+       // Seek(currentTarget.transform.position);
     }
 
     private void Update()
     {
-        Gather();
+        if(gathering)
+        {
+            if(!anim.GetBool("Walk")) anim.SetBool("Walk", true);
+
+            if (GetDistanceToTarget() <= accuracy)
+            {
+                var clump = currentTarget.GetComponent<Clump>();
+                if (clump != null)
+                {
+                    if(clump.GrabBlock())
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+                }
+                SetNextTarget(); 
+            }
+            Seek(currentTarget.transform.position);
+        }
+    }
+
+    public void SetFlockManager(AntFlockManager manager)
+    {
+        flockManager = manager;
+        flockManager.ChangeFlockTarget += SetNewGoal;
+    }
+
+    private void OnDisable()
+    {
+        flockManager.ChangeFlockTarget -= SetNewGoal;
     }
 
     // Got to target position
@@ -42,13 +76,19 @@ public class Ant : MonoBehaviour
         agent.SetDestination(location);
     }
 
-    public void Gather()
+    public void Gather(Clump goal)
     {
-        if (GetDistanceToTarget() <= accuracy)
-        {
-            anim.SetBool("Walk", true);
-            SetNextTarget();
-            Seek(currentTarget.transform.position);
+        targetGoal = goal;
+        currentTarget = goal.gameObject;
+        gathering = true;
+    }
+
+    private void SetNewGoal(Goal goal)
+    {
+        targetGoal = goal.GetComponent<Clump>();
+        // send ant to new goal if not headed home
+        if(currentTarget != home) {
+            currentTarget = targetGoal.gameObject;
         }
     }
 
@@ -62,7 +102,7 @@ public class Ant : MonoBehaviour
     {
         if(currentTarget == home.gameObject)
         {
-            currentTarget = targetGoal;
+            currentTarget = targetGoal.gameObject;
         }
         else
         {
