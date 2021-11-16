@@ -25,6 +25,7 @@ public class Clump : Goal
             {
                 GroundClumpDepleted?.Invoke();
                 depleted = true;
+                gameObject.SetActive(false);
             }
             
             return false;

@@ -52,7 +52,7 @@ public class AntFlockManager : FlockManager
         hits = Physics.RaycastAll(home.transform.position, dir, Vector3.Distance(home.transform.position, goal.transform.position), layerMask);
 
         foreach(RaycastHit hit in hits) {
-            var clump = hit.transform.parent.GetComponent<Clump>();;
+            var clump = hit.transform.GetComponent<Clump>();;
             if (!groundClumps.Contains(clump))
             {
                 groundClumps.Enqueue(clump);
