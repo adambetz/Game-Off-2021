@@ -1,18 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Home : MonoBehaviour
+public class Home : MonoBehaviour, IPointerClickHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    public event Action<GameObject> AntSpawned;
+
+    [SerializeField] private GameObject antPrefab = null;
+    [SerializeField] private Transform unitSpawnPoint = null;
+
+    public void OnPointerClick(PointerEventData eventData)
     {
-        
+        if (eventData.button != PointerEventData.InputButton.Left) return;
+
+        SpawnAnt();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnAnt()
     {
-        
+        GameObject antInstance = Instantiate(antPrefab, unitSpawnPoint.position, unitSpawnPoint.rotation);
+        AntSpawned?.Invoke(antInstance);
     }
 }

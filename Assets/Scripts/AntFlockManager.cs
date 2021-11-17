@@ -25,23 +25,29 @@ public class AntFlockManager : FlockManager
         CreatePath();
         GetNextGroundClump();
 
-        antsArray = new Ant[numerOfAnts];
+        antsArray = new List<Ant>();
         for (int i = 0; i < numerOfAnts; i++)
         {
             Vector3 pos = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
                                                                 Random.Range(-swimLimits.y, swimLimits.y),
                                                                 Random.Range(-swimLimits.z, swimLimits.z));
             var ant = Instantiate(antPrefab, pos, Quaternion.identity);
-            antsArray[i] = ant.GetComponent<Ant>();
+            antsArray.Add(ant.GetComponent<Ant>());
             antsArray[i].SetFlockManager(this);
 
             antsArray[i].Gather(currentGroundClump);
         }
     }
 
+    private void OnEnable()
+    {
+        home.AntSpawned += OnAntSpawned;
+    }
+
     private void OnDisable()
     {
         currentGroundClump.GroundClumpDepleted -= GetNextGroundClump;
+        home.AntSpawned -= OnAntSpawned;
     }
 
     private void CreatePath()
@@ -79,5 +85,12 @@ public class AntFlockManager : FlockManager
         currentGroundClump.GroundClumpDepleted += GetNextGroundClump;
 
         ChangeFlockTarget?.Invoke(currentGroundClump);
+    }
+
+    private void OnAntSpawned(GameObject ant)
+    {
+        var a = ant.GetComponent<Ant>();
+        a.SetFlockManager(this);
+        a.Gather(currentGroundClump);
     }
 }
