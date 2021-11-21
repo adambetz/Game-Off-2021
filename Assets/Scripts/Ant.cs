@@ -12,7 +12,7 @@ public class Ant : MonoBehaviour
     private Home home;
 
     //private Clump goal;
-    private Clump targetGoal;
+    private DirtBlock targetGoal;
 
     public GameObject currentTarget;
 
@@ -41,7 +41,7 @@ public class Ant : MonoBehaviour
 
             if (GetDistanceToTarget() <= accuracy)
             {
-                var clump = currentTarget.GetComponent<Clump>();
+                var clump = currentTarget.GetComponent<DirtBlock>();
                 if (clump != null)
                 {
                     if(clump.GrabBlock())
@@ -76,16 +76,16 @@ public class Ant : MonoBehaviour
         agent.SetDestination(location);
     }
 
-    public void Gather(Clump goal)
+    public void Gather(DirtBlock goal)
     {
         targetGoal = goal;
         currentTarget = goal.gameObject;
         gathering = true;
     }
 
-    private void SetNewGoal(Goal goal)
+    private void SetNewGoal(Block goal)
     {
-        targetGoal = goal.GetComponent<Clump>();
+        targetGoal = goal.GetComponent<DirtBlock>();
         // send ant to new goal if not headed home
         if(currentTarget != home) {
             currentTarget = targetGoal.gameObject;

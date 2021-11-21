@@ -4,18 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class AntFlockManager : FlockManager
+public class AntFlockManager : MonoBehaviour
 {
-    public event Action<Goal> ChangeFlockTarget;
+    public event Action<Block> ChangeFlockTarget;
+
+    public GameObject antPrefab = null;
+    public int numerOfAnts = 20;
+    public List<Ant> antsArray;
+    public Vector3 swimLimits = new Vector3(5, 5, 5);
 
     public LayerMask layerMask;
 
     private GameObject target = null;
-    public Goal goal;
-    public Clump currentGroundClump;
+    public Block goal;
+    public DirtBlock currentGroundClump;
     public Home home;
 
-    private Queue<Clump> groundClumps = new Queue<Clump>();
+    private Queue<DirtBlock> groundClumps = new Queue<DirtBlock>();
 
     
 
@@ -58,7 +63,7 @@ public class AntFlockManager : FlockManager
         hits = Physics.RaycastAll(home.transform.position, dir, Vector3.Distance(home.transform.position, goal.transform.position), layerMask);
 
         foreach(RaycastHit hit in hits) {
-            var clump = hit.transform.GetComponent<Clump>();;
+            var clump = hit.transform.GetComponent<DirtBlock>();;
             if (!groundClumps.Contains(clump))
             {
                 groundClumps.Enqueue(clump);
@@ -70,7 +75,7 @@ public class AntFlockManager : FlockManager
 
     private void DebugGroundClumps()
     {
-        foreach(Clump clump in groundClumps)
+        foreach(DirtBlock clump in groundClumps)
         {
             Debug.Log(clump.name);
         }

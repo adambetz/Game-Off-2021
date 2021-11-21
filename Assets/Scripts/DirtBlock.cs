@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clump : Goal
+public class DirtBlock : Block
 {
     public event Action GroundClumpDepleted;
     private bool depleted = false;
@@ -34,5 +34,15 @@ public class Clump : Goal
         var block = blocks.Dequeue();
         Destroy(block.gameObject);
         return true;
+    }
+
+    public override void Initialize(Data data)
+    {
+        blockData = data;
+        if(blockData.currentBlockState == BlockState.DEPLETED)
+        {
+            depleted = true;
+            gameObject.SetActive(false);
+        }
     }
 }
