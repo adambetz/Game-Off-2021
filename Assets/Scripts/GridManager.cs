@@ -8,11 +8,11 @@ public class GridManager : MonoBehaviour
     public static Vector2Int MapSize = new Vector2Int(100, 100);
     public static Vector3Int BlockSize = new Vector3Int (2,1,2);
 
+    public static BlockData[,] map = new BlockData[MapSize.x, MapSize.y];
+
     public GameObject Queen;
     public GameObject DirtBlock;
     public Vector2Int QueenLocation;
-
-    private Block.Data[,] map = new Block.Data[MapSize.x, MapSize.y];
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class GridManager : MonoBehaviour
         {
             for (int y=0; y<MapSize.y; y++)
             {
-                Block.Data initialData = new Block.Data { currentBlockState = Block.BlockState.IDLE, blockType = Block.BlockType.DIRT, reachable = false };
+                BlockData initialData = new BlockData { currentBlockState = BlockState.IDLE, blockType = BlockType.DIRT, isReachable = false, position = new Vector2Int(x,y) };
                 map[x,y] = initialData;
             }
         }
@@ -42,8 +42,7 @@ public class GridManager : MonoBehaviour
         {
             for (int y = middle.y - 1; y < yMax; y++)
             {
-                map[x,y].currentBlockState = Block.BlockState.DEPLETED;
-                SetNeighborsReachable(x,y);
+                map[x,y].currentBlockState = BlockState.DEPLETED;
             }
         }
     }
@@ -61,22 +60,39 @@ public class GridManager : MonoBehaviour
                 {
                     Instantiate(Queen, new Vector3(x*BlockSize.x - offsetX, 0, z*BlockSize.z - offsetZ), Quaternion.identity);
                 }
-                else if( map[x,z].blockType == Block.BlockType.DIRT )
+                else if( map[x,z].blockType == BlockType.DIRT )
                 {
                     var blockInstance = Instantiate(DirtBlock, new Vector3(x * BlockSize.x - offsetX, 0, z * BlockSize.z - offsetZ), Quaternion.identity);
                     var block = blockInstance.GetComponent<Block>();
                     block.Initialize(map[x, z]);
                     map[x,z].block = block; 
                 }
-                else if (map[x, z].blockType == Block.BlockType.FOOD)
+                else if (map[x, z].blockType == BlockType.FOOD)
                 {
                     // TODO
+                }
+
+                if(map[x,z].currentBlockState == BlockState.DEPLETED)
+                {
+                    SetNeighborsReachable(x, z);
+                }
+            }
+        }
+
+        // set reachable blocks
+        for (int x = 0; x < MapSize.x; x++)
+        {
+            for (int z = 0; z < MapSize.y; z++)
+            {
+                if (map[x, z].currentBlockState == BlockState.DEPLETED)
+                {
+                    SetNeighborsReachable(x, z);
                 }
             }
         }
     }
 
-    public void SetNeighborsReachable(int posX, int posY)
+    public static void SetNeighborsReachable(int posX, int posY)
     {
         Vector2Int above = new Vector2Int(posX, posY + 1);
         Vector2Int below = new Vector2Int(posX, posY - 1);
@@ -101,11 +117,19 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    private void SetBlockReachable(Block.Data block)
+    private static void SetBlockReachable(BlockData block)
     {
-        if (!block.reachable)
+        if(block.currentBlockState != BlockState.IDLE) return;
+        if (!block.isReachable)
         {
-            block.reachable = true;
+            if(block.block != null)
+            {
+                block.block.SetReachable(true);
+            }
+            else
+            {
+                block.isReachable =  true;
+            }
         }
     }
 }
