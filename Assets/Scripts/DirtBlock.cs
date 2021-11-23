@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DirtBlock : Block
+public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public event Action GroundClumpDepleted;
     private bool depleted = false;
@@ -16,6 +17,29 @@ public class DirtBlock : Block
         {
             blocks.Enqueue(transform.GetChild(i).gameObject);
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            // if block selectable
+                // add to queue
+        }
+        else if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            // cancel
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        
     }
 
     public bool GrabBlock()

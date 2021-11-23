@@ -15,6 +15,8 @@ public abstract class Block : MonoBehaviour
     {
         public BlockState currentBlockState;
         public BlockType blockType;
+        public bool reachable;
+        public Block block;
     }
     
     public Data blockData;

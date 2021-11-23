@@ -86,8 +86,11 @@ public class AntFlockManager : MonoBehaviour
         if(currentGroundClump)
             currentGroundClump.GroundClumpDepleted -= GetNextGroundClump;
 
-        currentGroundClump = groundClumps.Dequeue();
-        currentGroundClump.GroundClumpDepleted += GetNextGroundClump;
+        if(groundClumps.Count > 0)
+        {
+            currentGroundClump = groundClumps.Dequeue();
+            currentGroundClump.GroundClumpDepleted += GetNextGroundClump;
+        }
 
         ChangeFlockTarget?.Invoke(currentGroundClump);
     }

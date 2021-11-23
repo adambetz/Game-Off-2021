@@ -6,7 +6,7 @@ public class GridManager : MonoBehaviour
 {
     //must be greater than 5,5
     public static Vector2Int MapSize = new Vector2Int(100, 100);
-    public static Vector3Int BlockSize = new Vector3Int (1,1,1);
+    public static Vector3Int BlockSize = new Vector3Int (2,1,2);
 
     public GameObject Queen;
     public GameObject DirtBlock;
@@ -30,7 +30,7 @@ public class GridManager : MonoBehaviour
         {
             for (int y=0; y<MapSize.y; y++)
             {
-                Block.Data initialData = new Block.Data { currentBlockState = Block.BlockState.IDLE, blockType = Block.BlockType.DIRT };
+                Block.Data initialData = new Block.Data { currentBlockState = Block.BlockState.IDLE, blockType = Block.BlockType.DIRT, reachable = false };
                 map[x,y] = initialData;
             }
         }
@@ -42,16 +42,16 @@ public class GridManager : MonoBehaviour
         {
             for (int y = middle.y - 1; y < yMax; y++)
             {
-                Debug.Log(x + " " +y);
                 map[x,y].currentBlockState = Block.BlockState.DEPLETED;
+                SetNeighborsReachable(x,y);
             }
         }
     }
 
     public void BuildMap()
     {
-        int offsetX = QueenLocation.x;
-        int offsetZ = QueenLocation.y;
+        int offsetX = QueenLocation.x * BlockSize.x;
+        int offsetZ = QueenLocation.y * BlockSize.z;
 
         for (int x = 0; x < MapSize.x; x++)
         {
@@ -63,14 +63,49 @@ public class GridManager : MonoBehaviour
                 }
                 else if( map[x,z].blockType == Block.BlockType.DIRT )
                 {
-                    var block = Instantiate(DirtBlock, new Vector3(x * BlockSize.x - offsetX, 0, z * BlockSize.z - offsetZ), Quaternion.identity);
-                    block.GetComponent<Block>().Initialize(map[x,z]);
+                    var blockInstance = Instantiate(DirtBlock, new Vector3(x * BlockSize.x - offsetX, 0, z * BlockSize.z - offsetZ), Quaternion.identity);
+                    var block = blockInstance.GetComponent<Block>();
+                    block.Initialize(map[x, z]);
+                    map[x,z].block = block; 
                 }
                 else if (map[x, z].blockType == Block.BlockType.FOOD)
                 {
                     // TODO
                 }
             }
+        }
+    }
+
+    public void SetNeighborsReachable(int posX, int posY)
+    {
+        Vector2Int above = new Vector2Int(posX, posY + 1);
+        Vector2Int below = new Vector2Int(posX, posY - 1);
+        Vector2Int before = new Vector2Int(posX - 1, posY);
+        Vector2Int after = new Vector2Int(posX + 1, posY);
+
+        if(above.y < MapSize.y)
+        {
+            SetBlockReachable(map[above.x, above.y]);
+        }
+        if(below.y >= 0)
+        {
+            SetBlockReachable(map[below.x, below.y]);
+        }
+        if(before.x >= 0)
+        {
+            SetBlockReachable(map[before.x, before.y]);
+        }
+        if(after.x < MapSize.x)
+        {
+            SetBlockReachable(map[after.x, after.y]);
+        }
+    }
+
+    private void SetBlockReachable(Block.Data block)
+    {
+        if (!block.reachable)
+        {
+            block.reachable = true;
         }
     }
 }
