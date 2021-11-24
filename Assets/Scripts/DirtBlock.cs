@@ -6,8 +6,7 @@ using UnityEngine.EventSystems;
 
 public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public event Action GroundClumpDepleted;
-    private bool depleted = false;
+    //public event Action GroundClumpDepleted;
 
     [SerializeField] Color colorNotReachable = Color.white;
     [SerializeField] Color colorReachable = Color.white;
@@ -70,11 +69,9 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
     public bool GrabBlock()
     {
         if(blocks.Count == 0) {
-            if(!depleted)
+            if(blockData.currentBlockState != BlockState.DEPLETED)
             {
-                GroundClumpDepleted?.Invoke();
-                depleted = true;
-                gameObject.SetActive(false);
+                SetBlockDepleted();
             }
             
             return false;
@@ -90,7 +87,6 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
         blockData = data;
         if(blockData.currentBlockState == BlockState.DEPLETED)
         {
-            depleted = true;
             gameObject.SetActive(false);
         }
         if(blockData.isReachable)
@@ -119,6 +115,8 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
     private void AddBlockToGatherQueue()
     {
         blockData.currentBlockState = BlockState.PENDING;
+        
+        AddBlockToQueue();
 
         GridManager.SetNeighborsReachable(blockData.position.x, blockData.position.y);
 

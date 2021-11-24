@@ -257,6 +257,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &9824815
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -339,6 +343,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &11568454
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -1879,6 +1887,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &127481057
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -2771,6 +2783,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &214853551
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4230,6 +4246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &301049661
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4312,6 +4332,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &302381845
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -5771,6 +5795,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &420173320
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6096,6 +6124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &433806860
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6340,6 +6372,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &438189352
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -6584,6 +6620,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &472520224
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -8595,6 +8635,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &638100813
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -9446,6 +9490,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &709730258
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -9528,6 +9576,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &726807402
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -10096,6 +10148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &765617583
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -11231,6 +11287,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &832099876
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -11880,6 +11940,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &889549861
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -11962,6 +12026,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &890379832
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -12611,6 +12679,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &926257045
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13098,6 +13170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &961365130
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13442,6 +13518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &990408489
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13605,6 +13685,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1013191523
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -15838,6 +15922,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1203527601
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17054,6 +17142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1305240393
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17217,6 +17309,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1306216279
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18178,6 +18274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1411451073
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18422,6 +18522,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1421640254
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -19395,6 +19499,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1512853882
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -20854,6 +20962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1600798915
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -22070,6 +22182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1711238137
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -22962,6 +23078,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1759710416
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -23206,6 +23326,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1773884059
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -23478,59 +23602,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780165051}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1788933442
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1788933443}
-  - component: {fileID: 1788933444}
-  m_Layer: 0
-  m_Name: FlockManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1788933443
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788933442}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1788933444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788933442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ed01607252095f4d96c19d1ac72ba38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  antPrefab: {fileID: 2222903726818147341, guid: 8dce9bee6bf9b81479604fb859cb6030, type: 3}
-  numerOfAnts: 10
-  antsArray: []
-  swimLimits: {x: 5, y: 0, z: 5}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  goal: {fileID: 0}
-  currentGroundClump: {fileID: 0}
-  home: {fileID: 1993817404}
 --- !u!1 &1794398501
 GameObject:
   m_ObjectHideFlags: 0
@@ -25204,6 +25275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1894807183
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -26582,6 +26657,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1949130255
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -26826,6 +26905,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1950679134
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -27313,6 +27396,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &1993070044
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -27506,6 +27593,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &2000525407
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -27993,6 +28084,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!65 &2023778294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28399,6 +28494,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &2043798060
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -28562,6 +28661,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorNotReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorReachable: {r: 1, g: 1, b: 1, a: 1}
+  colorSelected: {r: 1, g: 1, b: 1, a: 1}
+  colorHover: {r: 1, g: 1, b: 1, a: 1}
 --- !u!208 &2053127978
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -29320,3 +29423,64 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2145518263}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2732213088591812331
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541096, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541097, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: m_Name
+      value: FlockManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732213090376541103, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}
+      propertyPath: home
+      value: 
+      objectReference: {fileID: 1993817404}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 419c48bc875022d4290dbac7d4bafbc3, type: 3}

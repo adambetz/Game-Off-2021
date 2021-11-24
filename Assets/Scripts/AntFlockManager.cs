@@ -28,7 +28,7 @@ public class AntFlockManager : MonoBehaviour
     protected void Start()
     {
         CreatePath();
-        GetNextGroundClump();
+       // GetNextGroundClump();
 
         antsArray = new List<Ant>();
         for (int i = 0; i < numerOfAnts; i++)
@@ -38,22 +38,22 @@ public class AntFlockManager : MonoBehaviour
                                                                 Random.Range(-swimLimits.z, swimLimits.z));
             var ant = Instantiate(antPrefab, pos, Quaternion.identity);
             antsArray.Add(ant.GetComponent<Ant>());
-            antsArray[i].SetFlockManager(this);
+            //antsArray[i].SetFlockManager(this);
 
             antsArray[i].Gather(currentGroundClump);
         }
     }
 
-    private void OnEnable()
-    {
-        home.AntSpawned += OnAntSpawned;
-    }
+    //private void OnEnable()
+    //{
+    //    home.AntSpawned += OnAntSpawned;
+    //}
 
-    private void OnDisable()
-    {
-        currentGroundClump.GroundClumpDepleted -= GetNextGroundClump;
-        home.AntSpawned -= OnAntSpawned;
-    }
+    //private void OnDisable()
+    //{
+    //    currentGroundClump.GroundClumpDepleted -= GetNextGroundClump;
+    //    home.AntSpawned -= OnAntSpawned;
+    //}
 
     private void CreatePath()
     {
@@ -81,24 +81,24 @@ public class AntFlockManager : MonoBehaviour
         }
     }
 
-    private void GetNextGroundClump()
-    {
-        if(currentGroundClump)
-            currentGroundClump.GroundClumpDepleted -= GetNextGroundClump;
+    //private void GetNextGroundClump()
+    //{
+    //    if(currentGroundClump)
+    //        currentGroundClump.GroundClumpDepleted -= GetNextGroundClump;
 
-        if(groundClumps.Count > 0)
-        {
-            currentGroundClump = groundClumps.Dequeue();
-            currentGroundClump.GroundClumpDepleted += GetNextGroundClump;
-        }
+    //    if(groundClumps.Count > 0)
+    //    {
+    //        currentGroundClump = groundClumps.Dequeue();
+    //        currentGroundClump.GroundClumpDepleted += GetNextGroundClump;
+    //    }
 
-        ChangeFlockTarget?.Invoke(currentGroundClump);
-    }
+    //    ChangeFlockTarget?.Invoke(currentGroundClump);
+    //}
 
     private void OnAntSpawned(GameObject ant)
     {
         var a = ant.GetComponent<Ant>();
-        a.SetFlockManager(this);
+        //a.SetFlockManager(this);
         a.Gather(currentGroundClump);
     }
 }
