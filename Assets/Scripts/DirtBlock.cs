@@ -13,13 +13,17 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
     [SerializeField] Color colorSelected = Color.white;
     [SerializeField] Color colorHover= Color.white;
 
+    private MenuManager menu;
+
     private Color lastColor = Color.white;
 
     public Queue<GameObject> blocks = new Queue<GameObject>();
 
     private void Awake()
     {
-        for(int i =0; i<transform.childCount; i++)
+        menu = GameObject.Find("Canvas").GetComponent<MenuManager>();
+
+        for (int i =0; i<transform.childCount; i++)
         {
             blocks.Enqueue(transform.GetChild(i).gameObject);
         }
@@ -79,6 +83,7 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
 
         var block = blocks.Dequeue();
         Destroy(block.gameObject);
+        menu.addDirt();
         return true;
     }
 

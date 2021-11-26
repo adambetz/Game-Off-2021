@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class Home : MonoBehaviour, IPointerClickHandler
 {
+    private MenuManager menu;
+
     public event Action<GameObject> AntSpawned;
     public event Action<Block> ChangeFlockTarget;
     
@@ -17,10 +19,10 @@ public class Home : MonoBehaviour, IPointerClickHandler
 
     public Block currentGoal;
 
-
     private void OnEnable()
     {
         Block.BlockedAddedToQueue += OnBlockAddedToQueue;
+        menu = GameObject.Find("Canvas").GetComponent<MenuManager>();
     }
 
     private void OnDisable()
@@ -37,10 +39,14 @@ public class Home : MonoBehaviour, IPointerClickHandler
 
     private void SpawnAnt()
     {
+        menu.addAnt();
+
         GameObject antInstance = Instantiate(antPrefab, unitSpawnPoint.position, unitSpawnPoint.rotation);
 
         var ant = antInstance.GetComponent<Ant>();
         ant.Initialize(this);
+
+        ant.transform.parent = menu.antHolder;
         //AntSpawned?.Invoke(antInstance);
     }
 

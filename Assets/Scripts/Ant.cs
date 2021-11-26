@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
-public class Ant : MonoBehaviour
+public class Ant : MonoBehaviour, IPointerClickHandler
 {
     public enum AntState { IDLE, WORKING };
     public AntState currentState { get; private set; } = AntState.IDLE;
+
+    private CameraMovement camScript;
 
     private bool waiting = false;
     private float waitTimer;
@@ -27,6 +30,7 @@ public class Ant : MonoBehaviour
     private void Awake()
     {
         home = FindObjectOfType<Home>();
+        camScript = GameObject.Find("Main Camera").GetComponent<CameraMovement>();
     }
 
     private void Update()
@@ -66,6 +70,13 @@ public class Ant : MonoBehaviour
         }
     }
 
+    //left click on an ant to follow it
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (eventData.button != PointerEventData.InputButton.Right) return;
+
+        camScript.ZoomOnTarget(gameObject);
+    }
 
     public void Initialize(Home h)
     {

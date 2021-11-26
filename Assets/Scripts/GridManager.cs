@@ -14,6 +14,8 @@ public class GridManager : MonoBehaviour
     public GameObject DirtBlock;
     public Vector2Int QueenLocation;
 
+    public Transform DirtHolder;
+
     private void Start()
     {
         GenerateMap();
@@ -65,7 +67,8 @@ public class GridManager : MonoBehaviour
                     var blockInstance = Instantiate(DirtBlock, new Vector3(x * BlockSize.x - offsetX, 0, z * BlockSize.z - offsetZ), Quaternion.identity);
                     var block = blockInstance.GetComponent<Block>();
                     block.Initialize(map[x, z]);
-                    map[x,z].block = block; 
+                    map[x,z].block = block;
+                    blockInstance.transform.parent = DirtHolder;
                 }
                 else if (map[x, z].blockType == BlockType.FOOD)
                 {
