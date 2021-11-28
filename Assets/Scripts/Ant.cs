@@ -13,8 +13,9 @@ public class Ant : MonoBehaviour
 
     private CameraMovement camScript;
 
-    private bool waiting = false;
+    public bool waiting = false;
     private float waitTimer;
+    private float waitedTime = Mathf.Infinity;
 
     //private AntFlockManager flockManager = null;
     public float accuracy = 3.0f;
@@ -41,16 +42,21 @@ public class Ant : MonoBehaviour
         {
             if (waiting)
             {
-                if(Time.deltaTime > waitTimer)
+                if(waitedTime > waitTimer)
                 {
                     waiting = false;
                 }
+                else
+                {
+                    waitedTime += Time.deltaTime;
+                }
             }
 
-            if (GetDistanceToTarget() <= accuracy)
+            if (GetDistanceToTarget() <= accuracy && !waiting)
             {
                 waiting = true;
-                waitTimer = Time.deltaTime + 3f;
+                waitedTime = Time.deltaTime;
+                waitTimer = Time.deltaTime + 2f;
 
                 var clump = currentTarget.GetComponent<DirtBlock>();
                 if (clump != null)
@@ -70,24 +76,35 @@ public class Ant : MonoBehaviour
         }
         else if (currentState == AntState.IDLE)
         {
+            waiting = false;
             if (GetDistanceToTarget() <= accuracy)
             {
                 HasDirt = false;
             }
         }
 
-        if (HasDirt)
-        {
-            Dirt.SetActive(true);
-            anim.SetBool("Walk", false);
-            anim.SetBool("Walk with food", true);
-        }
-        else
+        if(agent.velocity.magnitude < 0.1f && !waiting)
         {
             Dirt.SetActive(false);
             anim.SetBool("Walk with food", false);
-            anim.SetBool("Walk", true);
+            anim.SetBool("Walk", false);
         }
+        else
+        {
+            if (HasDirt)
+            {
+                Dirt.SetActive(true);
+                anim.SetBool("Walk", false);
+                anim.SetBool("Walk with food", true);
+            }
+            else
+            {
+                Dirt.SetActive(false);
+                anim.SetBool("Walk with food", false);
+                anim.SetBool("Walk", true);
+            }
+        }
+        
     }
 
     public void Initialize(Home h)
@@ -150,8 +167,12 @@ public class Ant : MonoBehaviour
 
     private float GetDistanceToTarget()
     {
-        Vector3 direction = currentTarget.transform.position - this.transform.position;
-        return direction.magnitude;
+        if(currentTarget != null)
+        {
+            Vector3 direction = currentTarget.transform.position - this.transform.position;
+            return direction.magnitude;
+        }
+        return 0; 
     }
 
     private void SetNextTarget()
