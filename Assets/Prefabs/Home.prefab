@@ -207,6 +207,7 @@ MonoBehaviour:
   antPrefab: {fileID: 2222903726818147341, guid: 8dce9bee6bf9b81479604fb859cb6030, type: 3}
   unitSpawnPoint: {fileID: 3128085875374782177}
   currentGoal: {fileID: 0}
+  DirtDropOff: {fileID: 0}
 --- !u!1001 &2653782991483444788
 PrefabInstance:
   m_ObjectHideFlags: 0

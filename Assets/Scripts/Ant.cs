@@ -13,7 +13,7 @@ public class Ant : MonoBehaviour
 
     private CameraMovement camScript;
 
-    public bool waiting = false;
+    private bool waiting = false;
     private float waitTimer;
     private float waitedTime = Mathf.Infinity;
 
@@ -22,6 +22,7 @@ public class Ant : MonoBehaviour
 
     [SerializeField] private NavMeshAgent agent;
     private Home home;
+    private GameObject dirtDropOff;
 
     //private Clump goal;
     private Block targetGoal;
@@ -107,10 +108,12 @@ public class Ant : MonoBehaviour
         
     }
 
-    public void Initialize(Home h)
+    public void Initialize(Home h, GameObject dropOff)
     {
         home = h;
         home.ChangeFlockTarget += SetNewGoal;
+
+        dirtDropOff = dropOff;
 
         if(home.currentGoal != null)
         {
@@ -146,14 +149,14 @@ public class Ant : MonoBehaviour
         {
             // no new goal. send ants home
             currentState = AntState.IDLE;
-            agent.SetDestination(home.transform.position + new Vector3(Random.Range(-2.5f, 2.5f), 0, Random.Range(-2.5f, 2.5f)));
+            agent.SetDestination(home.transform.position + new Vector3(Random.Range(-3f, 3f), 0, Random.Range(-3f, 3f)));
         }
         else
         {
             if (currentState == AntState.WORKING)
             {
                 targetGoal = goal;
-                if (currentTarget.gameObject != home.gameObject)
+                if (currentTarget.gameObject != dirtDropOff.gameObject)
                 {
                     currentTarget = targetGoal.gameObject;
                 }
@@ -177,14 +180,14 @@ public class Ant : MonoBehaviour
 
     private void SetNextTarget()
     {
-        if(currentTarget == home.gameObject)
+        if(currentTarget == dirtDropOff.gameObject || currentTarget == home.gameObject)
         {
             currentTarget = targetGoal.gameObject;
             HasDirt = false;
         }
         else
         {
-            currentTarget = home.gameObject;
+            currentTarget = dirtDropOff;
         }
     }
 

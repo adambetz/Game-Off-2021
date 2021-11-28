@@ -12,6 +12,7 @@ public class GridManager : MonoBehaviour
 
     public GameObject Queen;
     public GameObject DirtBlock;
+    public GameObject dirtDropOff;
     public Vector2Int QueenLocation;
 
     public Transform DirtHolder;
@@ -24,9 +25,9 @@ public class GridManager : MonoBehaviour
 
     public void GenerateMap()
     {
-        Vector2Int middle = new Vector2Int(MapSize.x / 2, MapSize.y / 2);
+        Vector2Int middle = new Vector2Int(MapSize.x / 2, MapSize.y - 10);
         QueenLocation = middle;
-
+        
         // initialize map
         for (int x=0; x<MapSize.x; x++)
         {
@@ -40,12 +41,18 @@ public class GridManager : MonoBehaviour
         // clear out queens location
         int xMax = middle.x + 2;
         int yMax = middle.y + 2;
-        for (int x = middle.x-1; x < xMax; x++)
+        for (int x = middle.x-2; x <= xMax; x++)
         {
-            for (int y = middle.y - 1; y < yMax; y++)
+            for (int y = middle.y - 2; y <= yMax; y++)
             {
                 map[x,y].currentBlockState = BlockState.DEPLETED;
             }
+        }
+
+        // clear tunnel to surface
+        for (int y = MapSize.y-1; y >= yMax; y--)
+        {
+            map[middle.x, y].currentBlockState = BlockState.DEPLETED;
         }
     }
 
@@ -60,7 +67,8 @@ public class GridManager : MonoBehaviour
             {
                 if(QueenLocation.x == x && QueenLocation.y == z)
                 {
-                    Instantiate(Queen, new Vector3(x*BlockSize.x - offsetX, 0, z*BlockSize.z - offsetZ), Quaternion.identity);
+                    var queen = Instantiate(Queen, new Vector3(x*BlockSize.x - offsetX, 0, z*BlockSize.z - offsetZ), Quaternion.identity);
+                    queen.GetComponent<Home>().DirtDropOff = Instantiate(dirtDropOff, new Vector3(x * BlockSize.x - offsetX, 0, MapSize.y * BlockSize.z - offsetZ), Quaternion.identity);
                 }
                 else if( map[x,z].blockType == BlockType.DIRT )
                 {

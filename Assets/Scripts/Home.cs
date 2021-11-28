@@ -19,6 +19,8 @@ public class Home : MonoBehaviour, IPointerClickHandler
 
     public Block currentGoal;
 
+    public GameObject DirtDropOff = null;
+
     private void OnEnable()
     {
         Block.BlockedAddedToQueue += OnBlockAddedToQueue;
@@ -44,7 +46,7 @@ public class Home : MonoBehaviour, IPointerClickHandler
         GameObject antInstance = Instantiate(antPrefab, unitSpawnPoint.position, unitSpawnPoint.rotation);
 
         var ant = antInstance.GetComponent<Ant>();
-        ant.Initialize(this);
+        ant.Initialize(this, DirtDropOff);
 
         ant.transform.parent = menu.antHolder;
         //AntSpawned?.Invoke(antInstance);
