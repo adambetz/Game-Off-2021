@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Home : MonoBehaviour, IPointerClickHandler
 {
-    private MenuManager menu;
+    private SceneMenu menu;
 
     public event Action<GameObject> AntSpawned;
     public event Action<Block> ChangeFlockTarget;
@@ -22,7 +22,7 @@ public class Home : MonoBehaviour, IPointerClickHandler
     private void OnEnable()
     {
         Block.BlockedAddedToQueue += OnBlockAddedToQueue;
-        menu = GameObject.Find("Canvas").GetComponent<MenuManager>();
+        menu = GameObject.Find("Canvas").GetComponent<SceneMenu>();
     }
 
     private void OnDisable()

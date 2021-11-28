@@ -13,7 +13,7 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
     [SerializeField] Color colorSelected = Color.white;
     [SerializeField] Color colorHover= Color.white;
 
-    private MenuManager menu;
+    private SceneMenu menu;
 
     private Color lastColor = Color.white;
 
@@ -21,7 +21,7 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
 
     private void Awake()
     {
-        menu = GameObject.Find("Canvas").GetComponent<MenuManager>();
+        menu = GameObject.Find("Canvas").GetComponent<SceneMenu>();
 
         for (int i =0; i<transform.childCount; i++)
         {

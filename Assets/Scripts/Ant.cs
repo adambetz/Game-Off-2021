@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.EventSystems;
 
-public class Ant : MonoBehaviour, IPointerClickHandler
+public class Ant : MonoBehaviour
 {
+    public GameObject Dirt;
+    public bool HasDirt = false;
+
     public enum AntState { IDLE, WORKING };
     public AntState currentState { get; private set; } = AntState.IDLE;
 
@@ -15,7 +17,7 @@ public class Ant : MonoBehaviour, IPointerClickHandler
     private float waitTimer;
 
     //private AntFlockManager flockManager = null;
-    public float accuracy = 5.0f;
+    public float accuracy = 3.0f;
 
     [SerializeField] private NavMeshAgent agent;
     private Home home;
@@ -43,9 +45,7 @@ public class Ant : MonoBehaviour, IPointerClickHandler
                 {
                     waiting = false;
                 }
-            } 
-
-            if (!anim.GetBool("Walk")) anim.SetBool("Walk", true);
+            }
 
             if (GetDistanceToTarget() <= accuracy)
             {
@@ -57,25 +57,37 @@ public class Ant : MonoBehaviour, IPointerClickHandler
                 {
                     if(clump.GrabBlock())
                     {
-
+                        HasDirt = true;
                     }
                     else
                     {
 
                     }
                 }
-                SetNextTarget(); 
+                SetNextTarget();
             }
             Seek(currentTarget.transform.position);
         }
-    }
+        else if (currentState == AntState.IDLE)
+        {
+            if (GetDistanceToTarget() <= accuracy)
+            {
+                HasDirt = false;
+            }
+        }
 
-    //left click on an ant to follow it
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (eventData.button != PointerEventData.InputButton.Right) return;
-
-        camScript.ZoomOnTarget(gameObject);
+        if (HasDirt)
+        {
+            Dirt.SetActive(true);
+            anim.SetBool("Walk", false);
+            anim.SetBool("Walk with food", true);
+        }
+        else
+        {
+            Dirt.SetActive(false);
+            anim.SetBool("Walk with food", false);
+            anim.SetBool("Walk", true);
+        }
     }
 
     public void Initialize(Home h)
@@ -147,6 +159,7 @@ public class Ant : MonoBehaviour, IPointerClickHandler
         if(currentTarget == home.gameObject)
         {
             currentTarget = targetGoal.gameObject;
+            HasDirt = false;
         }
         else
         {
