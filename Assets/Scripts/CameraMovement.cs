@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
@@ -19,12 +20,17 @@ public class CameraMovement : MonoBehaviour
 
     private bool RayDone; //this bool is used to avoid multi clicking objects when its unwanted
 
+    private Transform perviousRay;
+    private bool hasStoredRayObject;
+
+    //private List<Transform> previousRayObject = new List<Transform>();
+
     void FixedUpdate()
     {
         if (focuseOnTarget)
         {
             //follow target
-            transform.position = new Vector3(currentTarget.transform.position.x, 90, currentTarget.transform.position.z);
+            transform.position =  Vector3.Lerp(transform.position, new Vector3(currentTarget.transform.position.x, 90, currentTarget.transform.position.z), 1);
 
             //lock cam zoom to greater then 1 and less then 10
             if (CameraZoomAmount <= targetMinZoomValue) { CameraZoomAmount = targetMinZoomValue; }
@@ -60,28 +66,88 @@ public class CameraMovement : MonoBehaviour
         GetComponent<Camera>().orthographicSize = CameraZoomAmount;
 
         //Ray cast to see where you are right clicking
-        if (Input.GetMouseButtonDown(1))
+        RaycastHit hit;
+        Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
         {
-            if (!RayDone)
-            {
-                RaycastHit hit;
-                Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit))
-                {
-                    Transform hitObject = hit.transform;
+            Transform hitObject = hit.transform;
 
-                    //follow ant if right click
-                    if (hitObject.tag == "Ant") { ZoomOnTarget(hitObject.gameObject); }
-                    else { focuseOnTarget = false; }
+            if (!hasStoredRayObject)
+            {
+                perviousRay = hitObject;
+                hasStoredRayObject = true;
+            }
+
+            //if ray moved onto a new object
+            if (hitObject != perviousRay)
+            {
+                DirtBlock dirtScript = perviousRay.GetComponent<DirtBlock>();
+
+                if (dirtScript != null)
+                {
+                    dirtScript.MouseLeaveBlockHover();
+
+                    /*foreach (Transform rayObject in previousRayObject)
+                    {
+                        if (rayObject == hitObject) { return; }
+                        dirtScript.MouseLeaveBlockHover();
+                        //previousRayObject.Remove(rayObject);
+                    }*/
                 }
-                RayDone = true;
+                hasStoredRayObject = false;
+            }
+
+            //Dirt block hover detection
+            if (hitObject.tag == "Clump")
+            {
+                var dirtScript = hitObject.GetComponent<DirtBlock>();
+
+                if (dirtScript != null)
+                {
+                    dirtScript.MouseOverBlock();
+
+                    /*if (dirtScript.blockData.isReachable && dirtScript.blockData.currentBlockState == BlockState.IDLE)
+                    {
+                        if (!previousRayObject.Contains(hitObject)) { previousRayObject.Add(hitObject); }
+                    }*/
+                }
             }
         }
 
-        if (Input.GetMouseButtonUp(1))
-        {
-            RayDone = false;
-        }
+        if (Input.GetMouseButtonDown(1))
+          {
+              if (!RayDone)
+              {
+                  Transform hitObject = hit.transform;
+
+                  //Follow ant if right click
+                  if (hitObject.tag == "Ant") { ZoomOnTarget(hitObject.gameObject); }
+                  else { focuseOnTarget = false; }
+
+                  RayDone = true;
+              }
+          }
+
+          if (Input.GetMouseButton(0))
+          {
+              Transform hitObject = hit.transform;
+
+              //Dirt block click detection
+              if (hitObject.tag == "Clump")
+              {
+                  var dirtScript = hitObject.GetComponent<DirtBlock>();
+
+                  if (dirtScript != null)
+                  {
+                      dirtScript.MouseBlockClick();
+                  }
+              }
+          }
+
+          if (Input.GetMouseButtonUp(1))
+          {
+              RayDone = false;
+          }
     }
 
     public void ZoomOnTarget(GameObject target)

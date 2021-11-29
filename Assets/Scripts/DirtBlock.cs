@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class DirtBlock : Block//, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     //public event Action GroundClumpDepleted;
 
@@ -29,6 +29,7 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
         }
     }
 
+    /*
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -66,6 +67,47 @@ public class DirtBlock : Block, IPointerClickHandler, IPointerEnterHandler, IPoi
             foreach (MeshRenderer child in children)
             {
                 child.material.color = lastColor;
+            }
+        }
+    }
+    */
+
+    public void MouseOverBlock()
+    {
+        if (blockData.isReachable && blockData.currentBlockState == BlockState.IDLE)
+        {
+            var children = GetComponentsInChildren<MeshRenderer>();
+            lastColor = children[0].material.color;
+            foreach (MeshRenderer child in children)
+            {
+                child.material.color = colorHover;
+            }
+        }
+    }
+
+    public void MouseBlockClick()
+    {
+        if (blockData.isReachable && blockData.currentBlockState == BlockState.IDLE)
+        {
+            AddBlockToGatherQueue();
+        }
+    }
+
+    public void MouseLeaveBlockHover()
+    {
+        /*var children = GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer child in children)
+        {
+            child.material.color = lastColor;
+        }*/
+
+        
+        if (blockData.isReachable && blockData.currentBlockState == BlockState.IDLE)
+        {
+            var children = GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer child in children)
+            {
+                child.material.color = colorReachable;
             }
         }
     }
