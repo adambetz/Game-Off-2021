@@ -13,9 +13,11 @@ public class SceneMenu : MonoBehaviour
 
     public TextMeshProUGUI antText;
     public TextMeshProUGUI dirtText;
+    public TextMeshProUGUI foodText;
 
     public float numberOfAnts = 0;
     public float numberOfDirt = 0;
+    public float numberOfFood = 0;
 
     public GameObject PauseMenu;
 
@@ -89,7 +91,15 @@ public class SceneMenu : MonoBehaviour
 
     public void addFood()
     {
-        //TODO
+        numberOfFood += 1;
+        foodText.text = "Food: " + numberOfFood;
+        Task3.text = "Food " + numberOfFood + "/" + Goals3[Goal3];
+
+        if (numberOfFood >= Goals3[Goal3])
+        {
+            StartCoroutine(SendNotification(Goal3Title, Goals3BodyText, Goal3));
+            Goal3 += 1;
+        }
     }
 
     IEnumerator SendNotification(string Title, string[] goalsBodyText, int goalNumber)
