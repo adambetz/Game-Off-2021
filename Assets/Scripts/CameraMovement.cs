@@ -82,10 +82,22 @@ public class CameraMovement : MonoBehaviour
             if (hitObject != perviousRay)
             {
                 DirtBlock dirtScript = perviousRay.GetComponent<DirtBlock>();
+                FoodBlock foodScript = perviousRay.GetComponent<FoodBlock>();
 
                 if (dirtScript != null)
                 {
                     dirtScript.MouseLeaveBlockHover();
+
+                    /*foreach (Transform rayObject in previousRayObject)
+                    {
+                        if (rayObject == hitObject) { return; }
+                        dirtScript.MouseLeaveBlockHover();
+                        //previousRayObject.Remove(rayObject);
+                    }*/
+                }
+                else if (foodScript != null)
+                {
+                    foodScript.MouseLeaveBlockHover();
 
                     /*foreach (Transform rayObject in previousRayObject)
                     {
@@ -101,6 +113,7 @@ public class CameraMovement : MonoBehaviour
             if (hitObject.tag == "Clump")
             {
                 var dirtScript = hitObject.GetComponent<DirtBlock>();
+                var foodScript = hitObject.GetComponent<FoodBlock>();
 
                 if (dirtScript != null)
                 {
@@ -110,6 +123,10 @@ public class CameraMovement : MonoBehaviour
                     {
                         if (!previousRayObject.Contains(hitObject)) { previousRayObject.Add(hitObject); }
                     }*/
+                }
+                else if (foodScript != null)
+                {
+                    foodScript.MouseOverBlock();
                 }
             }
         }
@@ -126,28 +143,33 @@ public class CameraMovement : MonoBehaviour
 
                   RayDone = true;
               }
-          }
+        }
 
-          if (Input.GetMouseButton(0))
-          {
-              Transform hitObject = hit.transform;
+        if (Input.GetMouseButton(0))
+        {
+            Transform hitObject = hit.transform;
 
-              //Dirt block click detection
-              if (hitObject.tag == "Clump")
-              {
-                  var dirtScript = hitObject.GetComponent<DirtBlock>();
+            //Dirt block click detection
+            if (hitObject.tag == "Clump")
+            {
+                var dirtScript = hitObject.GetComponent<DirtBlock>();
+                var foodScript = hitObject.GetComponent<FoodBlock>();
 
-                  if (dirtScript != null)
-                  {
-                      dirtScript.MouseBlockClick();
-                  }
-              }
-          }
+                if (dirtScript != null)
+                {
+                    dirtScript.MouseBlockClick();
+                }
+                else if (foodScript != null)
+                {
+                    foodScript.MouseBlockClick();
+                }
+            }
+        }
 
-          if (Input.GetMouseButtonUp(1))
-          {
-              RayDone = false;
-          }
+        if (Input.GetMouseButtonUp(1))
+        {
+            RayDone = false;
+        }
     }
 
     public void ZoomOnTarget(GameObject target)

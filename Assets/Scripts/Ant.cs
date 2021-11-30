@@ -71,6 +71,21 @@ public class Ant : MonoBehaviour
 
                     }
                 }
+                else
+                {
+                    var foodClump = currentTarget.GetComponent<FoodBlock>();
+                    if (foodClump != null)
+                    {
+                        if (foodClump.GrabBlock())
+                        {
+                            HasDirt = true;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
                 SetNextTarget();
             }
             Seek(currentTarget.transform.position);

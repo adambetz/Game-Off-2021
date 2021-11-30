@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2643364885772066333}
-  - component: {fileID: 2643364885772066330}
+  - component: {fileID: 2225020203846308333}
   - component: {fileID: 2643364885772066331}
   - component: {fileID: 2643364885772066328}
   m_Layer: 7
@@ -115,7 +115,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2643364885772066330
+--- !u!114 &2225020203846308333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,13 +124,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2643364885772066332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17c882b1b69c68148ba74e0fab4a5006, type: 3}
+  m_Script: {fileID: 11500000, guid: e6a2b5315f978c24d8c4aa8101cf36a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorNotReachable: {r: 0.15686275, g: 0.5294118, b: 0.38431376, a: 1}
-  colorReachable: {r: 0.24670699, g: 0.6792453, b: 0.510783, a: 1}
-  colorSelected: {r: 0.40922037, g: 0.7169812, b: 0.55870426, a: 1}
-  colorHover: {r: 0.56470275, g: 0.8490566, b: 0.73830825, a: 1}
+  colorNotReachable: {r: 0.16078432, g: 0.5294118, b: 0.38431376, a: 1}
+  colorReachable: {r: 0.2509804, g: 0.6745098, b: 0.5058824, a: 1}
+  colorSelected: {r: 0.40784317, g: 0.7176471, b: 0.5568628, a: 1}
+  colorHover: {r: 0.5647059, g: 0.85098046, b: 0.7372549, a: 1}
 --- !u!208 &2643364885772066331
 NavMeshObstacle:
   m_ObjectHideFlags: 0
