@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class FoodBlock : Block
 {
-    public static event Action FoodAdded;
-
     private int foodUnits = 10;
 
     public void MouseOverBlock()
@@ -52,9 +50,8 @@ public class FoodBlock : Block
             return false;
         }
 
-        Home.FoodAmount++;
+        Home.AddFood();
         foodUnits--;
-        FoodAdded?.Invoke();
         return true;
     }
 }

@@ -51,16 +51,27 @@ public class SceneMenu : MonoBehaviour
     public string[] Goals4BodyText;
     public string[] Goals5BodyText;
 
+    public GameObject FoodAlertContainer;
+
     private void OnEnable()
     {
         DirtBlock.DirtAdded += addDirt;
-        FoodBlock.FoodAdded += addFood;
+        Home.FoodAdded += addFood;
+        Home.FoodRemoved += removeFood;
+        Home.InsufficientFood += showInsufficientFoodAlert;
     }
 
     private void OnDisable()
     {
         DirtBlock.DirtAdded -= addDirt;
-        FoodBlock.FoodAdded -= addFood;
+        Home.FoodAdded -= addFood;
+        Home.FoodRemoved -= removeFood;
+        Home.InsufficientFood -= showInsufficientFoodAlert;
+    }
+
+    private void Start()
+    {
+        foodText.text = "Food: " + Home.FoodAmount;
     }
 
     public void addAnt()
@@ -92,14 +103,35 @@ public class SceneMenu : MonoBehaviour
     public void addFood()
     {
         numberOfFood += 1;
-        foodText.text = "Food: " + numberOfFood;
-        Task3.text = "Food " + numberOfFood + "/" + Goals3[Goal3];
+        foodText.text = "Food: " + Home.FoodAmount;
 
-        if (numberOfFood >= Goals3[Goal3])
+        if (Goal4 < Goals4.Length && numberOfFood >= Goals4[Goal4])
         {
-            StartCoroutine(SendNotification(Goal3Title, Goals3BodyText, Goal3));
-            Goal3 += 1;
+            Task4.text = "Food " + numberOfFood + "/" + Goals4[Goal4];
+
+            StartCoroutine(SendNotification(Goal4Title, Goals4BodyText, Goal4));
+            Goal4 += 1;
         }
+    }
+
+    public void removeFood()
+    {
+        foodText.text = "Food: " + Home.FoodAmount;
+    }
+
+    private void showInsufficientFoodAlert()
+    {
+        if(!FoodAlertContainer.activeInHierarchy)
+        {
+            FoodAlertContainer.SetActive(true);
+            StartCoroutine(DisableObjectAfterSeconds(FoodAlertContainer, 3f));
+        } 
+    }
+
+    IEnumerator DisableObjectAfterSeconds(GameObject g, float time)
+    {
+        yield return new WaitForSeconds(time);
+        g.SetActive(false);
     }
 
     IEnumerator SendNotification(string Title, string[] goalsBodyText, int goalNumber)
@@ -113,7 +145,7 @@ public class SceneMenu : MonoBehaviour
         NotificationBodyText.text = goalsBodyText[goalNumber];
         Notification.SetActive(true);
 
-        yield return new WaitForSeconds(5) { };
+        yield return new WaitForSeconds(8);
         
         NotificationTitle.text = "";
         NotificationBodyText.text = "";

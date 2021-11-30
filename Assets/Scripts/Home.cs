@@ -11,7 +11,11 @@ public class Home : MonoBehaviour, IPointerClickHandler
     public event Action<GameObject> AntSpawned;
     public event Action<Block> ChangeFlockTarget;
 
-    public static int FoodAmount = 10;
+    public static event Action FoodAdded;
+    public static event Action FoodRemoved;
+    public static event Action InsufficientFood;
+
+    public static int FoodAmount { get; private set; } = 10;
     
     public int numerOfAnts = 0;
     public List<Ant> antsArray;
@@ -28,12 +32,17 @@ public class Home : MonoBehaviour, IPointerClickHandler
     private void OnEnable()
     {
         Block.BlockedAddedToQueue += OnBlockAddedToQueue;
-        menu = GameObject.Find("Canvas").GetComponent<SceneMenu>();
     }
 
     private void OnDisable()
     {
         Block.BlockedAddedToQueue -= OnBlockAddedToQueue;
+    }
+
+    private void Awake()
+    {
+        menu = GameObject.Find("Canvas").GetComponent<SceneMenu>();
+
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -43,7 +52,11 @@ public class Home : MonoBehaviour, IPointerClickHandler
         if (FoodAmount > 0)
         {
             SpawnAnt();
-            FoodAmount--;
+            RemoveFood();
+        }
+        else
+        {
+            InsufficientFood?.Invoke();
         }
     }
 
@@ -85,5 +98,17 @@ public class Home : MonoBehaviour, IPointerClickHandler
         }
        
         ChangeFlockTarget?.Invoke(currentGoal);
+    }
+
+    public static void AddFood()
+    {
+        FoodAmount++;
+        FoodAdded?.Invoke();
+    }
+
+    public static void RemoveFood()
+    {
+        FoodAmount--;
+        FoodRemoved?.Invoke();
     }
 }
