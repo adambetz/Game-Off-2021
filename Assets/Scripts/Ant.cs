@@ -59,7 +59,7 @@ public class Ant : MonoBehaviour
                 waitedTime = Time.deltaTime;
                 waitTimer = Time.deltaTime + 2f;
 
-                var clump = currentTarget.GetComponent<DirtBlock>();
+                var clump = currentTarget.GetComponent<Block>();
                 if (clump != null)
                 {
                     if(clump.GrabBlock())
@@ -69,21 +69,6 @@ public class Ant : MonoBehaviour
                     else
                     {
 
-                    }
-                }
-                else
-                {
-                    var foodClump = currentTarget.GetComponent<FoodBlock>();
-                    if (foodClump != null)
-                    {
-                        if (foodClump.GrabBlock())
-                        {
-                            HasDirt = true;
-                        }
-                        else
-                        {
-
-                        }
                     }
                 }
                 SetNextTarget();
