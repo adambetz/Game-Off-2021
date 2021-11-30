@@ -10,6 +10,8 @@ public class Home : MonoBehaviour, IPointerClickHandler
 
     public event Action<GameObject> AntSpawned;
     public event Action<Block> ChangeFlockTarget;
+
+    public static int FoodAmount = 10;
     
     public int numerOfAnts = 0;
     public List<Ant> antsArray;
@@ -36,20 +38,22 @@ public class Home : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button != PointerEventData.InputButton.Left) return;
 
-        SpawnAnt();
+        if (FoodAmount > 0)
+        {
+            SpawnAnt();
+            FoodAmount--;
+        }
     }
 
     private void SpawnAnt()
     {
-        menu.addAnt();
-
-        GameObject antInstance = Instantiate(antPrefab, unitSpawnPoint.position, unitSpawnPoint.rotation);
+        GameObject antInstance = Instantiate(antPrefab, unitSpawnPoint.position, unitSpawnPoint.rotation, menu.antHolder);
 
         var ant = antInstance.GetComponent<Ant>();
         ant.Initialize(this, DirtDropOff);
 
-        ant.transform.parent = menu.antHolder;
-        //AntSpawned?.Invoke(antInstance);
+        menu.addAnt();
+        AntSpawned?.Invoke(antInstance);
     }
 
     private void OnBlockAddedToQueue()

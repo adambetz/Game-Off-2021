@@ -21,6 +21,7 @@ public class FoodBlock : Block
             return false;
         }
 
+        Home.FoodAmount++;
         foodUnits--;
         FoodAdded?.Invoke();
         return true;
