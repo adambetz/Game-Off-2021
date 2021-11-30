@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2947,8 +2947,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Queen: {fileID: 3128085876103410205, guid: 2c7901581d487874db0720e247e6c17e, type: 3}
   DirtBlock: {fileID: 2643364885772066332, guid: 0d855ddfdc1e02f4d8b7d1458715e705, type: 3}
-  dirtDropOff: {fileID: 5384015028437291082, guid: 264f3b1d0e6105b4cb52d91dfba489b9, type: 3}
+  FoodBlock: {fileID: 2643364885772066332, guid: 3e41def3a144ebf46bb7acbdbe7282a7, type: 3}
+  DirtDropOff: {fileID: 5384015028437291082, guid: 264f3b1d0e6105b4cb52d91dfba489b9, type: 3}
   QueenLocation: {x: 0, y: 0}
+  foodAmout: 100
   DirtHolder: {fileID: 655406135}
 --- !u!4 &1202910671
 Transform:

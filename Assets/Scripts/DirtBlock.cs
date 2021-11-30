@@ -7,25 +7,15 @@ using UnityEngine.EventSystems;
 public class DirtBlock : Block//, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     //public event Action GroundClumpDepleted;
+    public static event Action DirtAdded;
 
-    [SerializeField] Color colorNotReachable = Color.white;
-    [SerializeField] Color colorReachable = Color.white;
-    [SerializeField] Color colorSelected = Color.white;
-    [SerializeField] Color colorHover= Color.white;
-
-    private SceneMenu menu;
-
-    private Color lastColor = Color.white;
-
-    public Queue<GameObject> blocks = new Queue<GameObject>();
+    public Queue<GameObject> childBlocks = new Queue<GameObject>();
 
     private void Awake()
     {
-        menu = GameObject.Find("Canvas").GetComponent<SceneMenu>();
-
         for (int i =0; i<transform.childCount; i++)
         {
-            blocks.Enqueue(transform.GetChild(i).gameObject);
+            childBlocks.Enqueue(transform.GetChild(i).gameObject);
         }
     }
 
@@ -77,7 +67,7 @@ public class DirtBlock : Block//, IPointerClickHandler, IPointerEnterHandler, IP
         if (blockData.isReachable && blockData.currentBlockState == BlockState.IDLE)
         {
             var children = GetComponentsInChildren<MeshRenderer>();
-            lastColor = children[0].material.color;
+            //lastColor = children[0].material.color;
             foreach (MeshRenderer child in children)
             {
                 child.material.color = colorHover;
@@ -112,9 +102,9 @@ public class DirtBlock : Block//, IPointerClickHandler, IPointerEnterHandler, IP
         }
     }
 
-    public bool GrabBlock()
+    public override bool GrabBlock()
     {
-        if(blocks.Count == 0) {
+        if(childBlocks.Count == 0) {
             if(blockData.currentBlockState != BlockState.DEPLETED)
             {
                 SetBlockDepleted();
@@ -123,54 +113,10 @@ public class DirtBlock : Block//, IPointerClickHandler, IPointerEnterHandler, IP
             return false;
         }
 
-        var block = blocks.Dequeue();
+        var block = childBlocks.Dequeue();
         Destroy(block.gameObject);
-        menu.addDirt();
+        DirtAdded?.Invoke();
         return true;
     }
 
-    public override void Initialize(BlockData data)
-    {
-        blockData = data;
-        if(blockData.currentBlockState == BlockState.DEPLETED)
-        {
-            gameObject.SetActive(false);
-        }
-        if(blockData.isReachable)
-        {
-            SetReachable(true);
-            Debug.Log(transform.position);
-        }
-    }
-
-    public override void SetReachable(bool reachable)
-    {
-        blockData.isReachable = reachable;
-        if (reachable)
-        {
-            if(blockData.currentBlockState == BlockState.IDLE)
-            {
-                var children = GetComponentsInChildren<MeshRenderer>();
-                foreach (MeshRenderer child in children)
-                {
-                    child.material.color = colorReachable;
-                }
-            }
-        }
-    }
-
-    private void AddBlockToGatherQueue()
-    {
-        blockData.currentBlockState = BlockState.PENDING;
-        
-        AddBlockToQueue();
-
-        GridManager.SetNeighborsReachable(blockData.position.x, blockData.position.y);
-
-        var children = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer child in children)
-        {
-            child.material.color = colorSelected;
-        }
-    }
 }

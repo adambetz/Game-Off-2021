@@ -53,7 +53,7 @@ public class Ant : MonoBehaviour
                 }
             }
 
-            if (GetDistanceToTarget() <= accuracy && !waiting)
+            if (currentTarget != null && GetDistanceToTarget() <= accuracy && !waiting)
             {
                 waiting = true;
                 waitedTime = Time.deltaTime;
@@ -175,7 +175,7 @@ public class Ant : MonoBehaviour
             Vector3 direction = currentTarget.transform.position - this.transform.position;
             return direction.magnitude;
         }
-        return 0; 
+        return Mathf.Infinity; 
     }
 
     private void SetNextTarget()

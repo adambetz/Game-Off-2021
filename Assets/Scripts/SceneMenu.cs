@@ -49,6 +49,18 @@ public class SceneMenu : MonoBehaviour
     public string[] Goals4BodyText;
     public string[] Goals5BodyText;
 
+    private void OnEnable()
+    {
+        DirtBlock.DirtAdded += addDirt;
+        FoodBlock.FoodAdded += addFood;
+    }
+
+    private void OnDisable()
+    {
+        DirtBlock.DirtAdded -= addDirt;
+        FoodBlock.FoodAdded -= addFood;
+    }
+
     public void addAnt()
     {
         numberOfAnts += 1;
@@ -73,6 +85,11 @@ public class SceneMenu : MonoBehaviour
             StartCoroutine(SendNotification(Goal2Title, Goals2BodyText, Goal2));
             Goal2 += 1;
         }
+    }
+
+    public void addFood()
+    {
+        //TODO
     }
 
     IEnumerator SendNotification(string Title, string[] goalsBodyText, int goalNumber)

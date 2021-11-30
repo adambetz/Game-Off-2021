@@ -12,8 +12,10 @@ public class GridManager : MonoBehaviour
 
     public GameObject Queen;
     public GameObject DirtBlock;
-    public GameObject dirtDropOff;
+    public GameObject FoodBlock;
+    public GameObject DirtDropOff;
     public Vector2Int QueenLocation;
+    public int foodAmout = 100;
 
     public Transform DirtHolder;
 
@@ -54,6 +56,19 @@ public class GridManager : MonoBehaviour
         {
             map[middle.x, y].currentBlockState = BlockState.DEPLETED;
         }
+
+        // add food 
+        int foodRemaining = foodAmout;
+        while (foodRemaining > 0)
+        {
+            int xRand = Random.Range(0, MapSize.x - 1);
+            int yRand = Random.Range(0, MapSize.y - 1);
+            if (map[xRand, yRand].currentBlockState == BlockState.IDLE && map[xRand, yRand].blockType != BlockType.FOOD)
+            {
+                map[xRand, yRand].blockType = BlockType.FOOD;
+                foodRemaining--;
+            }
+        }
     }
 
     public void BuildMap()
@@ -68,7 +83,7 @@ public class GridManager : MonoBehaviour
                 if(QueenLocation.x == x && QueenLocation.y == z)
                 {
                     var queen = Instantiate(Queen, new Vector3(x*BlockSize.x - offsetX, 0, z*BlockSize.z - offsetZ), Quaternion.identity);
-                    queen.GetComponent<Home>().DirtDropOff = Instantiate(dirtDropOff, new Vector3(x * BlockSize.x - offsetX, 0, MapSize.y * BlockSize.z - offsetZ), Quaternion.identity);
+                    queen.GetComponent<Home>().DirtDropOff = Instantiate(DirtDropOff, new Vector3(x * BlockSize.x - offsetX, 0, MapSize.y * BlockSize.z - offsetZ), Quaternion.identity);
                 }
                 else if( map[x,z].blockType == BlockType.DIRT )
                 {
@@ -80,7 +95,11 @@ public class GridManager : MonoBehaviour
                 }
                 else if (map[x, z].blockType == BlockType.FOOD)
                 {
-                    // TODO
+                    var blockInstance = Instantiate(FoodBlock, new Vector3(x * BlockSize.x - offsetX, 0, z * BlockSize.z - offsetZ), Quaternion.identity);
+                    var block = blockInstance.GetComponent<Block>();
+                    block.Initialize(map[x, z]);
+                    map[x, z].block = block;
+                    blockInstance.transform.parent = DirtHolder;
                 }
 
                 if(map[x,z].currentBlockState == BlockState.DEPLETED)
