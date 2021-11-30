@@ -23,6 +23,8 @@ public class Home : MonoBehaviour, IPointerClickHandler
 
     public GameObject DirtDropOff = null;
 
+    public AudioSource audioSource;
+
     private void OnEnable()
     {
         Block.BlockedAddedToQueue += OnBlockAddedToQueue;
@@ -54,6 +56,9 @@ public class Home : MonoBehaviour, IPointerClickHandler
 
         menu.addAnt();
         AntSpawned?.Invoke(antInstance);
+
+        audioSource.pitch = UnityEngine.Random.Range(1f, 2f);
+        audioSource.Play();
     }
 
     private void OnBlockAddedToQueue()
