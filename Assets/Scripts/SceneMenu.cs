@@ -109,11 +109,10 @@ public class SceneMenu : MonoBehaviour
     {
         numberOfFood += 1;
         foodText.text = "Food: " + Home.FoodAmount;
+        Task4.text = "Food " + numberOfFood + "/" + Goals4[Goal4];
 
         if (Goal4 < Goals4.Length && numberOfFood >= Goals4[Goal4])
         {
-            Task4.text = "Food " + numberOfFood + "/" + Goals4[Goal4];
-
             StartCoroutine(SendNotification(Goal4Title, Goals4BodyText, Goal4));
             Goal4 += 1;
         }

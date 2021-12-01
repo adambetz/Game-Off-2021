@@ -27,6 +27,11 @@ public class CameraMovement : MonoBehaviour
 
     public AudioSource PlaceBlockSound;
 
+    private void Start()
+    {
+        AppliedMovementSpeed = MovementSpeed;
+    }
+
     void FixedUpdate()
     {
         if (focuseOnTarget)

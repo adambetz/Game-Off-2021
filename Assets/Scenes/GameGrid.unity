@@ -554,7 +554,9 @@ MonoBehaviour:
   Goals4:
   - 10
   - 100
+  - 500
   - 1000
+  - 2000
   Goals5:
   - 5
   - 30
@@ -587,7 +589,9 @@ MonoBehaviour:
   Goals4BodyText:
   - 'Gatherer: You''ve collected 10 pieces of food!'
   - Now were getting going, you've collected 100 pieces of food!
-  - Master Chef! You've collected 1000 pieces of food!
+  - Food for days! You've collected 500 pieces of food!
+  - Master chef! You've collected 1000 pieces of food!
+  - Recodr breaker! You've collected 2000 pieces of food!
   Goals5BodyText:
   - 'Novice: you''ve played for 5 minutes!'
   - 'Beginner: you''ve played for 30 minutes!'
