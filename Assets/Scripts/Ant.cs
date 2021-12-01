@@ -5,8 +5,10 @@ using UnityEngine.AI;
 
 public class Ant : MonoBehaviour
 {
+    public GameObject Food;
     public GameObject Dirt;
     public bool HasDirt = false;
+    public bool HasFood = false;
 
     public enum AntState { IDLE, WORKING };
     public AntState currentState { get; private set; } = AntState.IDLE;
@@ -67,7 +69,8 @@ public class Ant : MonoBehaviour
                 {
                     if(clump.GrabBlock())
                     {
-                        HasDirt = true;
+                        if (currentTarget.GetComponent<FoodBlock>()) { HasFood = true; }
+                        else { HasDirt = true; }
                         EatSound.Play();
                     }
                     else
@@ -85,6 +88,7 @@ public class Ant : MonoBehaviour
             if (GetDistanceToTarget() <= accuracy)
             {
                 HasDirt = false;
+                HasFood = false;
             }
         }
 
@@ -102,9 +106,16 @@ public class Ant : MonoBehaviour
                 anim.SetBool("Walk", false);
                 anim.SetBool("Walk with food", true);
             }
+            else if (HasFood)
+            {
+                Food.SetActive(true);
+                anim.SetBool("Walk", false);
+                anim.SetBool("Walk with food", true);
+            }
             else
             {
                 Dirt.SetActive(false);
+                Food.SetActive(false);
                 anim.SetBool("Walk with food", false);
                 anim.SetBool("Walk", true);
             }
@@ -156,6 +167,8 @@ public class Ant : MonoBehaviour
             // no new goal. send ants home
             currentState = AntState.IDLE;
             agent.SetDestination(home.transform.position + new Vector3(Random.Range(-3f, 3f), 0, Random.Range(-3f, 3f)));
+            HasDirt = false;
+            HasFood = false;
         }
         else
         {
@@ -188,8 +201,9 @@ public class Ant : MonoBehaviour
     {
         if(currentTarget == dirtDropOff.gameObject || currentTarget == home.gameObject)
         {
-            currentTarget = targetGoal.gameObject;
             HasDirt = false;
+            HasFood = false;
+            currentTarget = targetGoal.gameObject;
         }
         else
         {

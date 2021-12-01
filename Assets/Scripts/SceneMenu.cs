@@ -175,6 +175,11 @@ public class SceneMenu : MonoBehaviour
 
     public void OpenTaskMenu()
     {
+        if (!MainMenu.activeSelf)
+        {
+            MainMenu.SetActive(true);
+        }
+
         ButtonSound.pitch = Random.Range(1f, 2f);
         ButtonSound.Play();
         PauseMenu.SetActive(false);
