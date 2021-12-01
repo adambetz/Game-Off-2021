@@ -25,12 +25,14 @@ public class CameraMovement : MonoBehaviour
 
     //private List<Transform> previousRayObject = new List<Transform>();
 
+    public AudioSource PlaceBlockSound;
+
     void FixedUpdate()
     {
         if (focuseOnTarget)
         {
             //follow target
-            transform.position =  Vector3.Lerp(transform.position, new Vector3(currentTarget.transform.position.x, 90, currentTarget.transform.position.z), 1);
+            transform.position =  Vector3.Lerp(transform.position, new Vector3(currentTarget.transform.position.x, 10, currentTarget.transform.position.z), 1);
 
             //lock cam zoom to greater then 1 and less then 10
             if (CameraZoomAmount <= targetMinZoomValue) { CameraZoomAmount = targetMinZoomValue; }
@@ -158,10 +160,12 @@ public class CameraMovement : MonoBehaviour
                 if (dirtScript != null)
                 {
                     dirtScript.MouseBlockClick();
+                    PlaceBlockSound.Play();
                 }
                 else if (foodScript != null)
                 {
                     foodScript.MouseBlockClick();
+                    PlaceBlockSound.Play();
                 }
             }
         }

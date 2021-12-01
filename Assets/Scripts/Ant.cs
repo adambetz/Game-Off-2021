@@ -31,6 +31,9 @@ public class Ant : MonoBehaviour
 
     public Animator anim;
 
+    public AudioSource WalkSound;
+    public AudioSource EatSound;
+
     private void Awake()
     {
         home = FindObjectOfType<Home>();
@@ -65,6 +68,7 @@ public class Ant : MonoBehaviour
                     if(clump.GrabBlock())
                     {
                         HasDirt = true;
+                        EatSound.Play();
                     }
                     else
                     {
@@ -105,7 +109,9 @@ public class Ant : MonoBehaviour
                 anim.SetBool("Walk", true);
             }
         }
-        
+
+        if (anim.GetBool("Walk")) { WalkSound.Play(); }
+        //else { WalkSound.Pause(); }
     }
 
     public void Initialize(Home h, GameObject dropOff)

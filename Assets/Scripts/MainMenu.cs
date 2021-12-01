@@ -3,19 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public AudioSource ButtonSound;
 
     public void StartGame()
     {
-        audioSource.pitch = Random.Range(1f, 2f);
-        audioSource.Play();
+        ButtonSound.pitch = Random.Range(1f, 2f);
+        ButtonSound.Play();
         SceneManager.LoadScene(1);
     }
 
     public void QuitGame()
     {
-        audioSource.pitch = Random.Range(1f, 2f);
-        audioSource.Play();
+        ButtonSound.pitch = Random.Range(1f, 2f);
+        ButtonSound.Play();
         Application.Quit();
     }
 }

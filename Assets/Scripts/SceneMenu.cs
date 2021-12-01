@@ -56,7 +56,7 @@ public class SceneMenu : MonoBehaviour
 
     public GameObject FoodAlertContainer;
 
-    public AudioSource audioSource;
+    public AudioSource ButtonSound;
 
     private void OnEnable()
     {
@@ -168,30 +168,30 @@ public class SceneMenu : MonoBehaviour
 
     public void ReturnToGame()
     {
-        audioSource.pitch = Random.Range(1f, 2f);
-        audioSource.Play();
+        ButtonSound.pitch = Random.Range(1f, 2f);
+        ButtonSound.Play();
         MainMenu.SetActive(false);
     }
 
     public void OpenTaskMenu()
     {
-        audioSource.pitch = Random.Range(1f, 2f);
-        audioSource.Play();
+        ButtonSound.pitch = Random.Range(1f, 2f);
+        ButtonSound.Play();
         PauseMenu.SetActive(false);
         TaskMenu.SetActive(true);
     }
 
     public void ExitToMainMenu()
     {
-        audioSource.pitch = Random.Range(1f, 2f);
-        audioSource.Play();
+        ButtonSound.pitch = Random.Range(1f, 2f);
+        ButtonSound.Play();
         SceneManager.LoadScene(0);
     }
 
     public void BackToMainMenu()
     {
-        audioSource.pitch = Random.Range(1f, 2f);
-        audioSource.Play();
+        ButtonSound.pitch = Random.Range(1f, 2f);
+        ButtonSound.Play();
         PauseMenu.SetActive(true);
         TaskMenu.SetActive(false);
     }
