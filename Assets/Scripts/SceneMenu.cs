@@ -19,7 +19,10 @@ public class SceneMenu : MonoBehaviour
     public float numberOfDirt = 0;
     public float numberOfFood = 0;
 
+    public GameObject MainMenu;
+
     public GameObject PauseMenu;
+    public GameObject TaskMenu;
 
     public TextMeshProUGUI Task1;
     public TextMeshProUGUI Task2;
@@ -52,6 +55,8 @@ public class SceneMenu : MonoBehaviour
     public string[] Goals5BodyText;
 
     public GameObject FoodAlertContainer;
+
+    public AudioSource audioSource;
 
     private void OnEnable()
     {
@@ -156,18 +161,38 @@ public class SceneMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (PauseMenu.activeSelf) { PauseMenu.SetActive(false); }
-            else { PauseMenu.SetActive(true); }
+            if (MainMenu.activeSelf) { MainMenu.SetActive(false); }
+            else { MainMenu.SetActive(true); }
         }
     }
 
     public void ReturnToGame()
     {
+        audioSource.pitch = Random.Range(1f, 2f);
+        audioSource.Play();
+        MainMenu.SetActive(false);
+    }
+
+    public void OpenTaskMenu()
+    {
+        audioSource.pitch = Random.Range(1f, 2f);
+        audioSource.Play();
         PauseMenu.SetActive(false);
+        TaskMenu.SetActive(true);
     }
 
     public void ExitToMainMenu()
     {
+        audioSource.pitch = Random.Range(1f, 2f);
+        audioSource.Play();
         SceneManager.LoadScene(0);
+    }
+
+    public void BackToMainMenu()
+    {
+        audioSource.pitch = Random.Range(1f, 2f);
+        audioSource.Play();
+        PauseMenu.SetActive(true);
+        TaskMenu.SetActive(false);
     }
 }
