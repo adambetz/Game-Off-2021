@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class FoodBlock : Block
 {
+    public static event Action DirtAdded;
+
     private int foodUnits = 10;
 
     public void MouseOverBlock()
@@ -52,6 +54,7 @@ public class FoodBlock : Block
 
         Home.AddFood();
         foodUnits--;
+        DirtAdded?.Invoke();
         return true;
     }
 }
