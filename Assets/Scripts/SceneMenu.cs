@@ -76,7 +76,7 @@ public class SceneMenu : MonoBehaviour
 
     private void Start()
     {
-        foodText.text = "Food: " + Home.FoodAmount;
+        resetFood();
     }
 
     public void addAnt()
@@ -120,6 +120,13 @@ public class SceneMenu : MonoBehaviour
 
     public void removeFood()
     {
+        foodText.text = "Food: " + Home.FoodAmount;
+    }
+
+    public void resetFood()
+    {
+        numberOfFood = 0;
+        Home.FoodAmount = 10;
         foodText.text = "Food: " + Home.FoodAmount;
     }
 
@@ -194,6 +201,7 @@ public class SceneMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        resetFood();
         ButtonSound.pitch = Random.Range(1f, 2f);
         ButtonSound.Play();
         PauseMenu.SetActive(true);

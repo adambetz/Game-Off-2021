@@ -15,8 +15,9 @@ public class Home : MonoBehaviour, IPointerClickHandler
     public static event Action FoodRemoved;
     public static event Action InsufficientFood;
 
-    public static int FoodAmount { get; private set; } = 10;
-    
+    public static int FoodAmount { get; set; }
+
+
     public int numerOfAnts = 0;
     public List<Ant> antsArray;
 
