@@ -165,13 +165,26 @@ public class CameraMovement : MonoBehaviour
                 if (dirtScript != null)
                 {
                     dirtScript.MouseBlockClick();
-                    PlaceBlockSound.Play();
                 }
                 else if (foodScript != null)
                 {
                     foodScript.MouseBlockClick();
-                    PlaceBlockSound.Play();
                 }
+            }
+        }
+
+        //spesifically used for playing the sound effect
+        if (Input.GetMouseButtonUp(0))
+        {
+            Transform hitObject = hit.transform;
+
+            //Dirt block click detection
+            if (hitObject.tag == "Clump")
+            {
+                var dirtScript = hitObject.GetComponent<DirtBlock>();
+                var foodScript = hitObject.GetComponent<FoodBlock>();
+                if (dirtScript != null) { PlaceBlockSound.Play(); }
+                else if (foodScript != null) { PlaceBlockSound.Play(); }
             }
         }
 
