@@ -121,7 +121,7 @@ public class Ant : MonoBehaviour
             }
         }
 
-        if (anim.GetBool("Walk")) { WalkSound.Play(); }
+        //if (anim.GetBool("Walk")) { WalkSound.Play(); }
         //else { WalkSound.Pause(); }
     }
 

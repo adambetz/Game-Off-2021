@@ -23,8 +23,6 @@ public class CameraMovement : MonoBehaviour
     private Transform perviousRay;
     private bool hasStoredRayObject;
 
-    //private List<Transform> previousRayObject = new List<Transform>();
-
     public AudioSource PlaceBlockSound;
 
     private void Start()
@@ -83,6 +81,18 @@ public class CameraMovement : MonoBehaviour
             {
                 perviousRay = hitObject;
                 hasStoredRayObject = true;
+
+                //Dirt block hover detection
+                if (hitObject.tag == "Clump")
+                {
+                    var dirtScript = hitObject.GetComponent<DirtBlock>();
+                    var foodScript = hitObject.GetComponent<FoodBlock>();
+
+                    if (dirtScript != null)
+                    { dirtScript.MouseOverBlock(); }
+                    else if (foodScript != null)
+                    { foodScript.MouseOverBlock(); }
+                }
             }
 
             //if ray moved onto a new object
@@ -92,49 +102,10 @@ public class CameraMovement : MonoBehaviour
                 FoodBlock foodScript = perviousRay.GetComponent<FoodBlock>();
 
                 if (dirtScript != null)
-                {
-                    dirtScript.MouseLeaveBlockHover();
-
-                    /*foreach (Transform rayObject in previousRayObject)
-                    {
-                        if (rayObject == hitObject) { return; }
-                        dirtScript.MouseLeaveBlockHover();
-                        //previousRayObject.Remove(rayObject);
-                    }*/
-                }
+                { dirtScript.MouseLeaveBlockHover(); }
                 else if (foodScript != null)
-                {
-                    foodScript.MouseLeaveBlockHover();
-
-                    /*foreach (Transform rayObject in previousRayObject)
-                    {
-                        if (rayObject == hitObject) { return; }
-                        dirtScript.MouseLeaveBlockHover();
-                        //previousRayObject.Remove(rayObject);
-                    }*/
-                }
+                { foodScript.MouseLeaveBlockHover(); }
                 hasStoredRayObject = false;
-            }
-
-            //Dirt block hover detection
-            if (hitObject.tag == "Clump")
-            {
-                var dirtScript = hitObject.GetComponent<DirtBlock>();
-                var foodScript = hitObject.GetComponent<FoodBlock>();
-
-                if (dirtScript != null)
-                {
-                    dirtScript.MouseOverBlock();
-
-                    /*if (dirtScript.blockData.isReachable && dirtScript.blockData.currentBlockState == BlockState.IDLE)
-                    {
-                        if (!previousRayObject.Contains(hitObject)) { previousRayObject.Add(hitObject); }
-                    }*/
-                }
-                else if (foodScript != null)
-                {
-                    foodScript.MouseOverBlock();
-                }
             }
         }
 
